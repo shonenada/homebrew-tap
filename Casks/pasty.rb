@@ -1,6 +1,6 @@
 cask "pasty" do
-  version "0.1.1"
-  sha256 "d1879fca1e9468abdd826166748afbe04cf7a858dc5eea3f50b30f3863021ff3"
+  version "0.1.2"
+  sha256 "37f44d51a1ad2dba456dd98bd91a63b3e5f76588692f2233ae3e8ab2c748458b"
 
   url "https://github.com/shonenada-vibe/pasty/releases/download/v#{version}/Pasty-#{version}.zip"
   name "Pasty"
