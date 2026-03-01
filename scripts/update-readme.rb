@@ -6,7 +6,7 @@ require "pathname"
 ROOT = Pathname(__dir__).join("..").expand_path
 DEFAULT_TAP_NAME = "shonenada/tap"
 
-Package = Struct.new(:type, :id, :name, :description, keyword_init: true)
+Package = Struct.new(:type, :id, :name, :description, :version, keyword_init: true)
 
 def detect_tap_name
   origin_url = `git config --get remote.origin.url 2>/dev/null`.strip
@@ -28,7 +28,8 @@ def parse_formula(path)
     type: :formula,
     id: id,
     name: id,
-    description: content[/^\s*desc\s+"([^"]+)"/, 1] || "No description provided."
+    description: content[/^\s*desc\s+"([^"]+)"/, 1] || "No description provided.",
+    version: content[/^\s*version\s+"([^"]+)"/, 1] || "No version provided."
   )
 end
 
@@ -40,7 +41,8 @@ def parse_cask(path)
     type: :cask,
     id: id,
     name: content[/^\s*name\s+"([^"]+)"/, 1] || id,
-    description: content[/^\s*desc\s+"([^"]+)"/, 1] || "No description provided."
+    description: content[/^\s*desc\s+"([^"]+)"/, 1] || "No description provided.",
+    version: content[/^\s*version\s+"([^"]+)"/, 1] || "No version provided."
   )
 end
 
@@ -59,6 +61,7 @@ def render_section(title, packages)
     lines << "### #{package.name}"
     lines << ""
     lines << "- Name: `#{package.name}`"
+    lines << "- Version: `#{package.version}`"
     lines << "- Description: #{package.description}"
     lines << "- Install: `#{install_command(package)}`"
     lines << ""
