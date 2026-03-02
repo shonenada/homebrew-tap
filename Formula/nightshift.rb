@@ -1,10 +1,10 @@
 class Nightshift < Formula
   desc "Toggle macOS Night Shift from the menu bar or command line"
   homepage "https://github.com/shonenada-vibe/night-shift"
-  url "https://github.com/shonenada-vibe/night-shift/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "38a3e4c047315b644a6fa007994c57ec188cea10b12d5154e0c2f410129973ca"
+  url "https://github.com/shonenada-vibe/night-shift/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "572f604ed326cd84d52ba28bbe612adcc24ce8ad5b17b68b240c417a6381765f"
   license "MIT"
-  version "0.1.0"
+  version "0.2.0"
 
   depends_on :macos
 
