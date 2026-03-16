@@ -1,23 +1,23 @@
 class Mdw < Formula
   desc "A terminal-based Markdown viewer with live-reload"
   homepage "https://github.com/shonenada-vibe/mdw"
-  version "0.12.2"
+  version "0.14.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/shonenada-vibe/mdw/releases/download/v0.12.2/mdw-v0.12.2-aarch64-apple-darwin.tar.gz"
-      sha256 "d68860e8a55fed534920ab0c301f79f18bd3ea3e11968c8e61076997ed96060a"
+      url "https://github.com/shonenada-vibe/mdw/releases/download/v0.14.0/mdw-v0.14.0-aarch64-apple-darwin.tar.gz"
+      sha256 "0d52e9477d04d4304ecc2588b6734a952041f278d8e872e804831c2914561031"
     elsif Hardware::CPU.intel?
-      url "https://github.com/shonenada-vibe/mdw/releases/download/v0.12.2/mdw-v0.12.2-x86_64-apple-darwin.tar.gz"
-      sha256 "6d5718480ad30d5f78020316f8c1f15772c48a3ee31a58333e7e55cc964191bc"
+      url "https://github.com/shonenada-vibe/mdw/releases/download/v0.14.0/mdw-v0.14.0-x86_64-apple-darwin.tar.gz"
+      sha256 "97ddb40cc3829fcdb532e666f177663478d6731d51f29b753b621ec05e2b7894"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/shonenada-vibe/mdw/releases/download/v0.12.2/mdw-v0.12.2-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "865fcc57c98494076658a923131015c520fc567af22581dbe794bee05b0cf48c"
+      url "https://github.com/shonenada-vibe/mdw/releases/download/v0.14.0/mdw-v0.14.0-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "41b361be14ae5ba83bf031397c4a9ab52ccabcd4465e319bfd0293e1942c7ca0"
     end
   end
 
